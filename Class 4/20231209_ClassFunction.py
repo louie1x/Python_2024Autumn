@@ -24,4 +24,26 @@ ptr.next = new_data #Set the position of the pointer
 new_data.next = head #Point to the head for circular architechture
 ptr = new_data #The position of the pointer sohuld be the postition of the new element
 
-traverse(ptr)
+new = Car("black") #Add the new element
+new.next = head #The new firsdt element points to the origianl head element
+
+#Find the element (ptr) which points to the original head element and turns to point to new element
+ptr = head
+while ptr.next != head:
+    ptr = ptr.next
+ptr.next = new
+
+head = new
+
+new = Car("pink") #Add the new element
+
+#Find the element (ptr) which your want the new node to insert after
+ptr = head
+while ptr.color != "red":
+    ptr = ptr.next
+
+#Insert new node into the linked list
+new.next = ptr.next
+ptr.next = new
+
+traverse(head)
