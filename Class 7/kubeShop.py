@@ -23,7 +23,6 @@ def getProductInfo(product_id): # Use product id to differenciate which product'
         print("The reference of document does not exist, please check if the path is correct or not.")
 
     # transfer product infor dictionary to display string
-    print(doc_dict)
     display_text = "{}, {} {}/{}".format(doc_dict["category"], doc_dict["origin"], doc_dict["color"], doc_dict["material"])
     display_price = "NT.{}".format(doc_dict["price"])
 
@@ -43,7 +42,7 @@ root = ThemedTk(theme="awdark", toplevel=True, themebg=True)
 # 設定視窗標題
 root.title('KubeTech Shop')
 # 設定視窗大小
-root.geometry('880x650')
+root.geometry('1100x350')
 
 
 # Product1 Label & Button 元件
